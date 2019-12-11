@@ -46,7 +46,7 @@ int efeitocura(int espirito, int inteligencia)
 int danoinimigofisico(int mforca, int defesa)
 {
 	int mdano;
-	mdano = mforca - defesa;
+	mdano = mforca - (defesa/2);
 	if(mdano <= 0)
 	{
 		mdano = 1;
@@ -60,7 +60,7 @@ int danoinimigofisico(int mforca, int defesa)
 int danoinimigomagico(int minteligencia , int mespirito , int defesa , int espirito)
 {
 	int mdano;
-	mdano = ((minteligencia/2) + (mespirito/4)) - (defesa + (espirito/4)); 
+	mdano = ((minteligencia) + (mespirito/4)) - (defesa + (espirito/4)); 
 	if (mdano <= 0){
   	mdano = 1;
  	}
