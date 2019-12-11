@@ -35,7 +35,7 @@ int main(){
 	FILE * ranking;
 	ranking = fopen("ranking.txt","a");
 
-  if(opcao == 1){
+  if(opcao == 1){ //Comeca o jogo
 
 		printf("Digite o seu nome!:");
 		
@@ -52,13 +52,13 @@ int main(){
 		do{
 		
 		printf("e o seus atributos? some no maximo 45 pontos\n atributos sao incrementados por mais 1 a cada vitoria\n");
-		printf("1º Forca : dano fisico");
+		printf("1Âº Forca : dano fisico");
 		scanf("%d",&forca);
-		printf("2º defesa : dano recebido");
+		printf("2Âº defesa : dano recebido");
 		scanf("%d",&defesa);
-		printf("3º inteligencia : dano magico");
+		printf("3Âº inteligencia : dano magico");
 		scanf("%d",&inteligencia);
-		printf("4º espirito : cura");
+		printf("4Âº espirito : cura");
 		scanf("%d",&espirito);
 		
 		if(forca+defesa+inteligencia+espirito > 45){
@@ -68,8 +68,8 @@ int main(){
 		
 		printf("Sua aventura esta prestes para comecar!.....\n\n\n");
 		printf("Voce veio ao vilarejo de Yuniep para acabar com Poderosa Manticora que assola o lugar com seus lacaios\n");
-		printf("A manticora e uma Criatura com corpo de leao , asas de morcego e cauda de Escorpiao. além de um potencial magico enorme\n");
-		printf("Antes de sair a procura, voce deve escolher uma arma e armadura:\nArma: 1 - Espada(forca + 3 , defesa +1)\n 2 - Cajado(inteligencia +3 , espirito + 2)\n 3 - Machado(forca + 4) \n");
+		printf("A manticora e uma Criatura com corpo de leao , asas de morcego e cauda de Escorpiao. alem de um potencial magico enorme\n");
+		printf("Antes de sair a procura, voce deve escolher uma arma e armadura:\nArma:\n 1 - Espada(forca + 3 , defesa +1)\n 2 - Cajado(inteligencia +3 , espirito + 2)\n 3 - Machado(forca + 4) \n");
 		int arma;
 		
 		do{
@@ -104,7 +104,7 @@ int main(){
 		
 		printf("status finais: HP: %d , Forca: %d ,Defesa: %d , inteligencia: %d , espirito: %d. \n\n", hp,forca,defesa,inteligencia,espirito);
 		
-		printf("Voce sai do vilarejo e se depara com 3 caminhos até a Caverna:\n1 - Uma Praia deserta(Normal)\n2 - uma floresta densa(Dificil)\n3 - uma rota pelas montanhas(Facil)");
+		printf("Voce sai do vilarejo e se depara com 3 caminhos ate a Caverna:\n1 - Uma Praia deserta(Normal)\n2 - uma floresta densa(Dificil)\n3 - uma rota pelas montanhas(Facil)");
 		int rota;
 		int pontuacao;
 		int mhp , mforca , mdefesa ,minteligencia , mespirito;
@@ -116,7 +116,9 @@ int main(){
 		int mmove = 0 + (rand() % 2);
 		do{
 		scanf("%d",&rota);
+		
 			if(rota == 1){
+				
 				printf("Voce decide ir pela praia, um caminho nao tao mal para a caverna...\n");
 				printf("Sua jornada e tranquila ate que das areias surge um Carangueijo gigante! \n");
 				mhp = 15 , mforca = 9, mdefesa = 10, minteligencia  = 1, mespirito = 10;
@@ -136,7 +138,7 @@ int main(){
 					if(opcaobatalha == 2){
 						printf("voce conjura uma magia de ataque!\n\n");
 						if(inteligencia < 5){
-							printf(".....mas falha, não tem inteligencia suficiente!\n\n");
+							printf(".....mas falha, nÃ£o tem inteligencia suficiente!\n\n");
 						}if(inteligencia > 5){
 						dano = ataquemagico(inteligencia, espirito , mdefesa , mespirito);
 						printf("dano causado: %d\n", dano);
@@ -173,8 +175,9 @@ int main(){
 				}while(hp > 0 && mhp > 0);		
 								
 			}if(rota == 2){
+				
 				printf("Voce decide ir pela floresta, qual desafio se espreita na mata?\n");
-				printf("Nada notavel...até que dos cipos aparece um morcego gigante!\n");
+				printf("Nada notavel...ate que dos cipos aparece um morcego gigante!\n");
 				mhp = 25 , mforca = 15, mdefesa = 15, minteligencia  = 15, mespirito = 12;
 				do{
 					
@@ -192,7 +195,7 @@ int main(){
 					if(opcaobatalha == 2){
 						printf("voce conjura uma magia de ataque!\n\n");
 						if(inteligencia < 5){
-							printf(".....mas falha, não tem inteligencia suficiente!\n\n");
+							printf(".....mas falha, nÃ£o tem inteligencia suficiente!\n\n");
 						}if(inteligencia > 5){
 						dano = ataquemagico(inteligencia, espirito , mdefesa , mespirito);
 						printf("dano causado: %d\n\n", dano);
@@ -235,8 +238,9 @@ int main(){
 				}while(hp > 0 && mhp > 0);	
 				
 			}if(rota == 3){
+				
 				printf("Voce decide ir pela montanha, nao deve ser dificil...\n");
-				printf("Um passei pelos bosques rochosos é atrapalhado por...um Lobo!\n");
+				printf("Um passei pelos bosques rochosos Ã© atrapalhado por...um Lobo!\n");
 				mhp = 15 , mforca = 10, mdefesa = 8, minteligencia  = 4, mespirito = 4;
 				do{
 					
@@ -254,7 +258,7 @@ int main(){
 					if(opcaobatalha == 2){
 						printf("voce conjura uma magia de ataque!\n\n");
 						if(inteligencia < 5){
-							printf(".....mas falha, não tem inteligencia suficiente!\n\n");
+							printf(".....mas falha, nÃ£o tem inteligencia suficiente!\n\n");
 						}if(inteligencia > 5){
 						dano = ataquemagico(inteligencia, espirito , mdefesa , mespirito);
 						printf("dano causado: %d\n\n", dano);
@@ -292,13 +296,17 @@ int main(){
 				}
 		}while(rota != 1 && rota != 2 && rota != 3);
 		
+		//Se venceu um encontro anterior
+		
 		printf("Apos um breve batalha, voce emerge proximo a caverna do seu alvo\n"); 
 		printf("A caverna pode ser acessada diretamente, ou por um breve detour ao redor para chegar ao centro rapidamente\n\n");
 		printf("1 - Entrar na caverna a frente! \n 2 - tomar cuidado e procurar por outra entrada\n");
 		int acesso;	
 		do{	
 		scanf("%d", &acesso);
-		if(acesso == 1){
+		
+		if(acesso == 1){ //Adentra a caverna
+			
 			printf("voce adentra o covil bravamente, com sua arma e conviccao em maos\n");
 				printf("para a sua surpresa (ou nao), algo alem da manticora se encontra na caverna, um Grifo!!\n");
 				mhp = 40 , mforca = 22, mdefesa = 19, minteligencia  = 22, mespirito = 21;
@@ -318,7 +326,7 @@ int main(){
 					if(opcaobatalha == 2){
 						printf("voce conjura uma magia de ataque!\n\n");
 						if(inteligencia < 5){
-							printf(".....mas falha, não tem inteligencia suficiente!\n\n");
+							printf(".....mas falha, nÃ£o tem inteligencia suficiente!\n\n");
 						}if(inteligencia > 5){
 						dano = ataquemagico(inteligencia, espirito , mdefesa , mespirito);
 						printf("dano causado: %d\n\n", dano);
@@ -361,10 +369,11 @@ int main(){
 				}while(hp > 0 && mhp > 0);	
 				
 		}
-		if(acesso == 2){
-			printf("voce decide tomar uma rota segura e circula o perimetro...até achar um passage secreta!\n");
+		if(acesso == 2){ //pega um atalho
+			
+			printf("voce decide tomar uma rota segura e circula o perimetro...ate achar um passage secreta!\n");
 		}
-				printf("os seus esforcos o levam até a criatura temida, A manticora!\n");
+				printf("os seus esforcos o levam ate a criatura temida, A manticora!\n");
 				printf("Ela se levanta do seu pedestal e toma voo, circulando e observando a sua proxima presa(voce)!\n");
 				mhp = 62 , mforca = 22, mdefesa = 26, minteligencia  = 29, mespirito = 25;
 				do{
@@ -383,7 +392,7 @@ int main(){
 					if(opcaobatalha == 2){
 						printf("voce conjura uma magia de ataque!\n\n");
 						if(inteligencia < 5){
-							printf(".....mas falha, não tem inteligencia suficiente!\n\n");
+							printf(".....mas falha, nÃ£o tem inteligencia suficiente!\n\n");
 						}if(inteligencia > 5){
 						dano = ataquemagico(inteligencia, espirito , mdefesa , mespirito);
 						printf("dano causado: %d\n\n", dano);
@@ -421,9 +430,13 @@ int main(){
 	
 		}while(acesso != 1 && acesso != 2);
 		
+		//Vitoria sobre a manticora
+		
 		printf("voce retorna ao vilarejo com a cabeca da manticora, provando que a derrotou, nao ha maior recompensa do que os habitantes clamando o seu nome(talvez o dinheiro)/n/n");
 		printf("FIM DE JOGO\n\n");
-}if (opcao == 2 ){
+		
+}if (opcao == 2 ){ //Pontuacao
+	
 	char rankings[100];
 	ranking = fopen ("ranking.txt" , "r+");
    	
@@ -433,8 +446,10 @@ int main(){
     fclose (ranking);
    }
  
-if (opcao == 3){
+if (opcao == 3){ //Creditos do Criador
+	
 	printf("Criador: Ilo Felipe Ferreira Camara Cavalcante \nMatricula:1920027007\n");
+	
 }
 	
 }while(opcao != 4);
