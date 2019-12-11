@@ -421,11 +421,24 @@ int main(){
 	
 		}while(acesso != 1 && acesso != 2);
 		
-		printf("voce retorna ao vilarejo com a cabeca da manticora, provando que a derrotou, nao ha maior recompensa do que os habitantes clamando o seu nome(talvez o dinheiro)");
+		printf("voce retorna ao vilarejo com a cabeca da manticora, provando que a derrotou, nao ha maior recompensa do que os habitantes clamando o seu nome(talvez o dinheiro)/n/n");
+		printf("FIM DE JOGO\n\n");
+}if (opcao == 2 ){
+	char rankings[100];
+	ranking = fopen ("ranking.txt" , "r+");
+   	
+      fgets (rankings , 100 , ranking);
+       puts (rankings);
+      
+    fclose (ranking);
+   }
+ 
+if (opcao == 3){
+	printf("Criador: Ilo Felipe Ferreira Camara Cavalcante \nMatricula:1920027007\n");
 }
 	
 }while(opcao != 4);
 
-  return 0; //retornando o valor para main
+  return 0;
 
 }
