@@ -301,7 +301,7 @@ int main(){
 		if(acesso == 1){
 			printf("voce adentra o covil bravamente, com sua arma e conviccao em maos\n");
 				printf("para a sua surpresa (ou nao), algo alem da manticora se encontra na caverna, um Grifo!!\n");
-				mhp = 35 , mforca = 18, mdefesa = 15, minteligencia  = 21, mespirito = 17;
+				mhp = 40 , mforca = 22, mdefesa = 19, minteligencia  = 25, mespirito = 21;
 				do{
 					
 					printf("						BATALHA EM PROGRESSO					\n\n");
@@ -366,7 +366,7 @@ int main(){
 		}
 				printf("os seus esforcos o levam até a criatura temida, A manticora!\n");
 				printf("Ela se levanta do seu pedestal e toma voo, circulando e observando a sua proxima presa(voce)!\n");
-				mhp = 49 , mforca = 20, mdefesa = 20, minteligencia  = 25, mespirito = 20;
+				mhp = 62 , mforca = 24, mdefesa = 26, minteligencia  = 31, mespirito = 25;
 				do{
 					
 					printf("						BATALHA EM PROGRESSO					\n\n");
